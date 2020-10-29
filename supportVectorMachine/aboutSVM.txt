@@ -1,0 +1,39 @@
+SUPPORT VECTOR MACHINE
+
+supervised machine learning classification algorithm
+
+====================================================
+
+SIMPLE SVM
+
+In case of linearly separable data in two dimensions, a typical machine learning algorithm tries to find a boundary that divides the data in such a way that the misclassification error can be minimized. However, there can be several boundaries that correctly divide the data points. 
+
+SVM differs from the other classification algorithms in the way that it chooses the decision boundary that maximizes the distance from the nearest data points of all the classes. An SVM doesn't merely find a decision boundary; it finds the most optimal decision boundary.
+
+The most optimal decision boundary is the one which has maximum margin from the nearest points of all the classes. The nearest points from the decision boundary that maximize the distance between the decision boundary and the points are called support vectors. The decision boundary in case of support vector machines is called the maximum margin classifier, or the maximum margin hyper plane.
+
+====================================================
+
+SIMPLE SVM
+
+In the case of non-linearly separable data, such as the one shown in Fig. 3, a straight line cannot be used as a decision boundary.
+
+In case of non-linearly separable data, the simple SVM algorithm cannot be used. Rather, a modified version of SVM, called Kernel SVM, is used.
+
+Basically, the kernel SVM projects the non-linearly separable data lower dimensions to linearly separable data in higher dimensions in such a way that data points belonging to different classes are allocated to different dimensions.
+
+This approach differs from the previos step in the value for the kernel parameter of the SVC class. In the case of the simple SVM we used "linear" as the value for the kernel parameter. However, for kernel SVM you can use Gaussian, polynomial, sigmoid, or computable kernel. 
+
+====================================================
+
+PERFORMANCE
+
+If we compare the performance of the different types of kernels we can clearly see that the sigmoid kernel performs the worst. This is due to the reason that sigmoid function returns two values, 0 and 1, therefore it is more suitable for binary classification problems. However, in our case we had three output classes.
+
+Amongst the Gaussian kernel and polynomial kernel, we can see that Gaussian kernel achieved a perfect 100% prediction rate while polynomial kernel misclassified one instance. Therefore the Gaussian kernel performed slightly better. However, there is no hard and fast rule as to which kernel performs best in every scenario. It is all about testing all the kernels and selecting the one with the best results on your test dataset.
+
+====================================================
+
+DATASET
+
+Our task is to predict whether a bank currency note is authentic or not based upon four attributes of the note i.e. skewness of the wavelet transformed image, variance of the image, entropy of the image, and curtosis of the image. This is a binary classification problem and we will use SVM algorithm to solve this problem. 
